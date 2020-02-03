@@ -5,47 +5,47 @@
       {
         "text": "Getting Started",
         "as": "/guides/getting_started",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       },
       {
         "text": "Overview",
         "as": "/guides/overview",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       },
       {
         "text": "Next.js",
         "as": "/guides/nextjs",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       },
       {
         "text": "Managing State",
         "as": "/guides/managing_state",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       },
       {
         "text": "API",
         "as": "/guides/api",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       },
       {
         "text": "Navigation",
         "as": "/guides/navigation",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       },
       {
         "text": "Styling",
         "as": "/guides/styling",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       },
       {
         "text": "Sessions",
         "as": "/guides/sessions",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       },
       {
         "text": "CMS Integration",
         "as": "/guides/cms",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       }
     ]
   },
@@ -55,27 +55,27 @@
       {
         "text": "Main Menu",
         "as": "/guides/main_menu",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       },
       {
         "text": "Home",
         "as": "/guides/home",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       },
       {
         "text": "Subcategory",
         "as": "/guides/subcategory",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       },
       {
         "text": "Product",
         "as": "/guides/product",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       },
       {
         "text": "Search",
         "as": "/guides/search",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       }
     ]
   },
@@ -85,12 +85,12 @@
       {
         "text": "AMP",
         "as": "/guides/amp",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       },
       {
         "text": "Analytics",
         "as": "/guides/analytics",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       }
     ]
   },
@@ -100,22 +100,22 @@
       {
         "text": "Deploying",
         "as": "/guides/xdn_deploying",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       },
       {
         "text": "Routing",
         "as": "/guides/xdn_routing",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       },
       {
         "text": "Caching",
         "as": "/guides/xdn_caching",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       },
       {
         "text": "Image Optimization",
         "as": "/guides/xdn_image_optimization",
-        "href": "/guides/[guide]"
+        "href": "/guides/[...guide]"
       }
     ]
   },
