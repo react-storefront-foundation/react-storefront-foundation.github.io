@@ -118,10 +118,5 @@
         "href": "/guides/[...guide]"
       }
     ]
-  },
-  {
-    "text": "API Reference",
-    "as": "/apiReference/index",
-    "href": "/apiReference/[...module]"
   }
 ]
