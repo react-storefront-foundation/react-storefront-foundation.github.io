@@ -1,0 +1,127 @@
+[
+  {
+    "text": "Guides",
+    "items": [
+      {
+        "text": "Getting Started",
+        "as": "/guides/getting_started",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "Overview",
+        "as": "/guides/overview",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "Next.js",
+        "as": "/guides/nextjs",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "Managing State",
+        "as": "/guides/managing_state",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "API",
+        "as": "/guides/api",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "Navigation",
+        "as": "/guides/navigation",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "Prefetching",
+        "as": "/guides/prefetching",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "Styling",
+        "as": "/guides/styling",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "Sessions",
+        "as": "/guides/sessions",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "CMS Integration",
+        "as": "/guides/cms",
+        "href": "/guides/[...guide]"
+      }
+    ]
+  },
+  {
+    "text": "Pages and Features",
+    "items": [
+      {
+        "text": "Main Menu",
+        "as": "/guides/main_menu",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "Home",
+        "as": "/guides/home",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "Subcategory",
+        "as": "/guides/subcategory",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "Product",
+        "as": "/guides/product",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "Search",
+        "as": "/guides/search",
+        "href": "/guides/[...guide]"
+      }
+    ]
+  },
+  {
+    "text": "Premium Features",
+    "items": [
+      {
+        "text": "AMP",
+        "as": "/guides/amp",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "Analytics",
+        "as": "/guides/analytics",
+        "href": "/guides/[...guide]"
+      }
+    ]
+  },
+  {
+    "text": "Moovweb XDN",
+    "items": [
+      {
+        "text": "Deploying",
+        "as": "/guides/xdn_deploying",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "Routing",
+        "as": "/guides/xdn_routing",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "Caching",
+        "as": "/guides/xdn_caching",
+        "href": "/guides/[...guide]"
+      },
+      {
+        "text": "Image Optimization",
+        "as": "/guides/xdn_image_optimization",
+        "href": "/guides/[...guide]"
+      }
+    ]
+  }
+]
