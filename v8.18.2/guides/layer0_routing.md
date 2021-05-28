@@ -4,7 +4,7 @@ Layer0 adds powerful routing capabilities beyond what Next.js provides. By deplo
 
 - Proxy URLs from additional upstream sites
 - Send redirects from the network edge
-- Handle URLs that do not follow Next.js conventions such as "vanity" URLs used for SEO.
+- Handle URLs that do not follow Next.js conventions such as "vanity" URLs used for SEO
 - Fall back to Next.js standard routing for unmatched requests
 
 ## Configuration
