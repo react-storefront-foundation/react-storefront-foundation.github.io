@@ -35,8 +35,8 @@ module.exports = new Router().use(nextRoutes)
 Cache responses by using the `cache` function in routes for specific pages:
 
 ```js
-const { Router } = require('@xdn/core/router')
-const { nextRoutes } = require('@xdn/next')
+const { Router } = require('@layer0/core/router')
+const { nextRoutes } = require('@layer0/next')
 
 module.exports = new Router()
   .get('/', ({ cache }) => {
@@ -59,7 +59,7 @@ module.exports = new Router()
 ### Proxying Unhandled URLs to a Legacy Experience
 
 Layer0 makes it easy to proxy URLs not handled by your PWA to a legacy experience. To do so, define a legacy backend
-in xdn.config.js:
+in layer0.config.js:
 
 ```js
 require('dotenv').config()

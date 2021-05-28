@@ -41,7 +41,7 @@ A cached response will be considered "fresh" and will be served from the cache f
 By default, Layer0 will serve a cached response if and only if it's entire URL, including the query string, matches the requested URL. You can choose to ignore some or all query parameters when determining if a cached response can be served by creating a custom cache key:
 
 ```js
-import { Router, createCustomCacheKey } from '@xdn/core'
+import { Router, createCustomCacheKey } from '@layer0/core'
 
 router.match('/p/:productId', async ({ cache, render }) => {
   cache({
