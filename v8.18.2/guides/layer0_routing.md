@@ -11,7 +11,7 @@ Layer0 adds powerful routing capabilities beyond what Next.js provides. By deplo
 
 To define routes for Layer0, create a `routes.js` file in the root of your project. You can override the default path to the router by setting the `routes` key in `layer0.config.js`.
 
-The `routes.js` file should export an instance of `@layer0/core/Router`:
+The `routes.js` file should export an instance of `@layer0/core/router/Router`:
 
 ```js
 // routes.js
