@@ -1,6 +1,6 @@
 # Caching
 
-Layer0 provides powerful caching capabilities that you configure from JavaScript. This guide covers how to cache your responses to make your app lighting-fast.
+Layer0 provides powerful caching capabilities that you configure from JavaScript. This guide covers how to cache your responses to make your app lightning-fast.
 
 ## Caching a route
 
@@ -27,21 +27,21 @@ router.match('/p/:productId', async ({ cache, render }) => {
 
 The browser config controls how a response is cached in the browser. The `browser` config accepts two values:
 
-- `maxAgeSeconds` - The number of seconds that a response can be served from the browser's conventional http cache. We recommend using this for js and css assets that have a hash in the filename and can be far-future cached, or for non-code assets like images. We suggest setting a value of `maxAgeSeconds: 0` for API responses. Instead use the service worker cache by setting `serviceWorkerSeconds`.
+- `maxAgeSeconds` - The number of seconds that a response can be served from the browser's conventional HTTP cache. We recommend using this for JS and CSS assets that have a hash in the filename and can be far-future cached, or for non-code assets like images. We suggest setting a value of `maxAgeSeconds: 0` for API responses. Instead, use the service worker cache by setting `serviceWorkerSeconds`.
 - `serviceWorkerSeconds` - The number of seconds that a response can be served from the service worker's cache. We recommend using this for API responses because React Storefront will automatically clear this cache when a new version of the app is released. This cannot be done with the HTTP cache, and thus we recommend setting `maxAgeSeconds: 0` for API responses.
 
 ## Caching at Edge
 
-You can set a cached response's time to live at the edge using the `maxAgeSeconds` and `staleWhileRevalidateSeconds` options.
+You can set a cached response's time to live (TTL) at the edge using the `maxAgeSeconds` and `staleWhileRevalidateSeconds` options.
 
 A cached response will be considered "fresh" and will be served from the cache for `maxAgeSeconds`. When a request is received for a stale response, you can optionally serve the stale response while fetching a fresh response for the next request by setting `staleWhileRevalidateSeconds`, which controls how long a stale response can be served before being evicted from the cache.
 
 ## Ignoring query parameters
 
-By default, Layer0 will serve a cached response if and only if it's entire URL, including the query string, matches the requested URL. You can choose to ignore some or all query parameters when determining if a cached response can be served by creating a custom cache key:
+By default, Layer0 will serve a cached response if and only if its entire URL, including the query string, matches the requested URL. You can choose to ignore some or all query parameters when determining if a cached response can be served by creating a custom cache key:
 
 ```js
-import { Router, createCustomCacheKey } from '@xdn/core'
+import { Router, createCustomCacheKey } from '@layer0/core'
 
 router.match('/p/:productId', async ({ cache, render }) => {
   cache({
@@ -78,7 +78,7 @@ cache({
 })
 ```
 
-Layer0 recommends using `ignoreAllQueryParametersExcept()` to "whitelist" the query parameters that each page excepts. Real world apps often suffer from severe cache fragmentation due to unexpected query parameters being passed from links on third-party sites, most of which are only needed for tracking clicks in client-side analytics. Ignoring query parameters in your cache configuration will not affect such analytics.
+Layer0 recommends using `ignoreAllQueryParametersExcept()` to "whitelist" the query parameters that each page accepts. Real world apps often suffer from severe cache fragmentation due to unexpected query parameters being passed from links on third-party sites, most of which are only needed for tracking clicks in client-side analytics. Ignoring query parameters in your cache configuration will not affect such analytics.
 
 ## Caching multiple variants for a given URL
 
@@ -94,10 +94,10 @@ The default cache key in Layer0 consists of the following request parameters:
 Implications are as following:
 
 - Every deployment will have a separate cache space
-- Every domain in the site, if your site serves more than one domain, will have a separate cache space
+- If your site serves more than one domain, every domain in the site will have a separate cache space
 - Every path in the site will have a separate cache space
 - Every backend will have a separate cache space (so even in the same version a request made to say desktop backend will be a separate cache entry from the one made to say mobile backend)
-- HTTPS requests will have a different cache space from HTTP (although since Layer0 doesn't allow HTTP traffic in practice this is relevant only for 301s redirecting from HTTP to HTTPS)
+- HTTPS requests will have a different cache space from HTTP (although since Layer0 doesn't allow HTTP traffic, in practice this is relevant only for 301s redirecting from HTTP to HTTPS)
 
 ### Custom cache keys
 
@@ -119,7 +119,7 @@ In this scenario, Layer0 will store a separate response in the cache for each va
 
 You can return a single cached response for multiple values of a cookie by passing an optional partitioning callback to `addCookie()`. Here we create two partitions: one called "na" representing North America, consisting of "us" and "ca", and one for all others.
 
-In this example users with a location cookie with value of "us" or "ca" will share one response, while all other users will share a different response:
+In this example, users with a location cookie with value of "us" or "ca" will share one response, while all other users will share a different response:
 
 ```js
 createCustomCacheKey().addCookie('location', cookie => {

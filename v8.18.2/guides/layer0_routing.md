@@ -4,14 +4,14 @@ Layer0 adds powerful routing capabilities beyond what Next.js provides. By deplo
 
 - Proxy URLs from additional upstream sites
 - Send redirects from the network edge
-- Handle URLs that do not follow Next.js conventions such as "vanity" URLs used for SEO.
+- Handle URLs that do not follow Next.js conventions such as "vanity" URLs used for SEO
 - Fall back to Next.js standard routing for unmatched requests
 
 ## Configuration
 
 To define routes for Layer0, create a `routes.js` file in the root of your project. You can override the default path to the router by setting the `routes` key in `layer0.config.js`.
 
-The `routes.js` file should export an instance of `@layer0/core/Router`:
+The `routes.js` file should export an instance of `@layer0/core/router/Router`:
 
 ```js
 // routes.js
@@ -35,8 +35,8 @@ module.exports = new Router().use(nextRoutes)
 Cache responses by using the `cache` function in routes for specific pages:
 
 ```js
-const { Router } = require('@xdn/core/router')
-const { nextRoutes } = require('@xdn/next')
+const { Router } = require('@layer0/core/router')
+const { nextRoutes } = require('@layer0/next')
 
 module.exports = new Router()
   .get('/', ({ cache }) => {
@@ -59,7 +59,7 @@ module.exports = new Router()
 ### Proxying Unhandled URLs to a Legacy Experience
 
 Layer0 makes it easy to proxy URLs not handled by your PWA to a legacy experience. To do so, define a legacy backend
-in xdn.config.js:
+in layer0.config.js:
 
 ```js
 require('dotenv').config()
