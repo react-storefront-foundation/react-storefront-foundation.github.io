@@ -59,7 +59,7 @@ ctx.renderPage = async () => {
 
 ## Two-way data binding
 
-AMP and React have fundamentally different patterns for managing state. React allows you to respond to events with javascript and update state using the update function returned by the `useState` hook. AMP uses a more declarative approach with [amp-bind](https://amp.dev/documentation/components/amp-bind/) that resembles to-way data-binding. In order to create a common approach to state management that works in both react and amp, `react-storefront-amp` provides two-way databinding via a `DataBindingProvider` component and the `bind` prop.
+AMP and React have fundamentally different patterns for managing state. React allows you to respond to events with javascript and update state using the update function returned by the `useState` hook. AMP uses a more declarative approach with [amp-bind](https://amp.dev/documentation/components/amp-bind/) that resembles two-way data-binding. In order to create a common approach to state management that works in both react and amp, `react-storefront-amp` provides two-way databinding via a `DataBindingProvider` component and the `bind` prop.
 
 Here's a simple example from `pages/p/[productId].js` that shows how the quantity selector updates the page state in both AMP and React using the same code:
 
