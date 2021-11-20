@@ -37,5 +37,5 @@ mainProductImage.src = await getBase64ForImage(mainProductImage.src)
 
 ### defer vs async
 
-Oue tests show that using `defer` instead of `async` when importing client-side JavaScript generally improves Lighthouse performance scores by a few points. It usually improves FCP and LCP, but makes TTI and TBT a bit worse.  Normally this trade-off nets a higher Lighthouse score. This may or may not be the case for your app. You can experiment by changing the `mode` prop from `defer` to `async` in `NextScript` in `pages/_document_.js`
+Our tests show that using `defer` instead of `async` when importing client-side JavaScript generally improves Lighthouse performance scores by a few points. It usually improves FCP and LCP, but makes TTI and TBT a bit worse.  Normally this trade-off nets a higher Lighthouse score. This may or may not be the case for your app. You can experiment by changing the `mode` prop from `defer` to `async` in `NextScript` in `pages/_document_.js`
 
